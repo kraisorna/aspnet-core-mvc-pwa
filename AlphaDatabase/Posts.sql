@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[Posts]
+(
+	[PostId] INT NOT NULL  IDENTITY,
+	[Title] [nvarchar](max) NULL,
+	[Content] [nvarchar](max) NULL,
+	[BlogId] [int] NOT NULL,
+ CONSTRAINT [PK_Posts] PRIMARY KEY CLUSTERED 
+(
+	[PostId] ASC
+)WITH (PAD_INDEX = OFF, 
+STATISTICS_NORECOMPUTE = OFF, 
+IGNORE_DUP_KEY = OFF, 
+ALLOW_ROW_LOCKS = ON, 
+ALLOW_PAGE_LOCKS = ON) ON [PRIMARY], 
+    CONSTRAINT [FK_Posts_Blogs_BlogId] FOREIGN KEY ([BlogId]) REFERENCES [dbo].[Blogs] ([BlogId])
+	ON DELETE CASCADE, CHECK (1 = 1)
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]

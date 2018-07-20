@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="cfda9265-6cba-4679-bcbf-ffd661ec7ce2" ChangeDateTime="07/20/2018 02:59:49">
+    <Property Name="ElementName" Value="[dbo].[Blogs].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blogs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BlogId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="adbf1279-592f-4764-ba89-f0abc597a2c3" ChangeDateTime="07/20/2018 03:12:19">
+    <Property Name="ElementName" Value="[dbo].[Posts].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Posts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PostId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="03eeacba-272b-483e-b4ef-56ac5ae62ef8" ChangeDateTime="07/20/2018 03:15:32">
+    <Property Name="ElementName" Value="[dbo].[FK_Posts_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Posts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Posts_Blogs_BlogId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4d732d08-cf3b-4358-93d6-04aaed20d720" ChangeDateTime="07/20/2018 03:18:02">
+    <Property Name="ElementName" Value="[dbo].[CK_Posts_Column]" />
+    <Property Name="ElementType" Value="SqlCheckConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Posts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Posts_Blogs_BlogId]" />
+  </Operation>
+</Operations>
